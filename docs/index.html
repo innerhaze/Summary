@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="" />
+
+
+<title>Relación entre divergencia evolutiva y conectividad histórica en los páramos andinos del norte durante el Pleistoceno: El caso de Espeletiinae</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Relación entre divergencia evolutiva y
+conectividad histórica en los páramos andinos del norte durante el
+Pleistoceno: El caso de Espeletiinae</h1>
+<h4 class="author"></h4>
+
+</div>
+
+
+<style>
+/* Mantiene la misma fuente para los blockquotes */
+blockquote {
+    font-family: inherit; /* Usa la misma fuente que el resto del texto */
+    font-size: inherit; /* Usa el mismo tamaño de fuente que el resto del texto */
+}
+
+/* Ajusta el ancho del menú de la tabla de contenido flotante */
+.tocify {
+    width: 1300px; /* Ajusta este valor según sea necesario */
+}
+.tocify-wrapper {
+    width: 1300px; /* Ajusta este valor según sea necesario */
+}
+</style>
+<hr />
+<div id="introducción" class="section level1">
+<h1><strong>1. Introducción</strong></h1>
+<p>Este estudio explora la diversificación de los organismos en los
+páramos de los Andes del norte, un ecosistema de alta montaña que ha
+sido significativamente influenciado por eventos geológicos y climáticos
+durante el Pleistoceno. Durante esta época, las fluctuaciones climáticas
+generaron dinámicas complejas de conectividad entre los fragmentos de
+páramo, lo que se hipotetiza que afectó la distribución y divergencia de
+las especies que habitan estos ecosistemas. El objetivo de este estudio
+es evaluar la relación entre la divergencia evolutiva y la conectividad
+histórica durante el Pleistoceno, integrando la modelación
+paleoclimática con el complejo de frailejones (subtribu Espeletiinae)
+como modelo biológico.</p>
+<div id="section" class="section level5">
+<h5></h5>
+<p><strong>Nota</strong>: <em>Los títulos de las secciones metodológicas
+clave incluyen enlaces que dirigen a repositorios de GitHub con los
+códigos utilizados y explicaciones más detalladas de cada sección. Para
+revisar el proceso completo de este estudio, excluyendo la
+reconstrucción filogenética, consulta el siguiente <a
+href="https://innerhaze.github.io/Evolutionary-Divergence-Historical-Connectivity-in-Northern-Andean-Paramos-Pleistocene-/">enlace.</a></em></p>
+<hr />
+</div>
+</div>
+<div id="metodología" class="section level1">
+<h1><strong>2. Metodología</strong></h1>
+<hr />
+<div id="modelos-de-conectividad-geográfica" class="section level3">
+<h3><strong>2.1 Modelos de Conectividad Geográfica</strong></h3>
+<p>El estudio comenzó con el desarrollo de modelos de conectividad
+geográfica, basados en el modelo paleoclimático propuesto por Flantua et
+al. (2019). Este modelo describe las fluctuaciones del Límite Superior
+del Bosque (LSB) a lo largo de ≈2 millones de años, lo que permite
+evaluar cómo estos cambios afectaron la conectividad entre los
+fragmentos de páramo en los Andes.</p>
+<ol style="list-style-type: decimal">
+<li><div>
+<blockquote>
+<p><a
+href="https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling"><strong>Desarrollo
+de la Matriz de Costos de Movimiento:</strong></a> Se construyó un
+raster de costos utilizando un Modelo Digital de Elevación (DEM) que
+abarca todas las áreas de páramo en los Andes del norte. Se asignaron
+costos específicos de movimiento a diferentes franjas altitudinales,
+reflejando la limitada capacidad de dispersión de los organismos de
+páramo. El costo de movimiento aumenta gradualmente a medida que se
+aleja del núcleo del páramo, reflejando las dificultades que enfrentan
+las especies para dispersarse entre fragmentos aislados.</p>
+</blockquote>
+</div></li>
+<li><div>
+<blockquote>
+<p><a
+href="https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management"><strong>Cálculo
+de Métricas de Conectividad:</strong></a> Utilizando el software
+Graphab, se calcularon diversas métricas de conectividad, incluidas la
+Distancia de Menor Costo (RMC) y el índice de Flujo de Corriente (CF).
+Estas métricas se determinaron para 19 configuraciones distintas de
+páramo, derivadas de las fluctuaciones climáticas del Pleistoceno, según
+el modelo de Flantua et al. (2019). Estos cálculos son fundamentales
+para entender cómo las fluctuaciones climáticas influyeron en la
+conectividad entre los parches que representan la distribución de cada
+una de las especies incluidas en la filogenia de Espeletiinae
+desarrollada por Diazgranados y Barber (2017).</p>
+</blockquote>
+</div></li>
+</ol>
+<hr />
+</div>
+<div id="métodos-filogenéticos" class="section level3">
+<h3><strong>2.2 Métodos Filogenéticos</strong></h3>
+<p>Con los modelos de conectividad ya establecidos, se procedió a la
+construcción de una filogenia ultramétrica de Espeletiinae. Se
+utilizaron datos de secuencias de ADN de los genes ETS, ITS, y rpl16,
+obtenidos de estudios previos realizados por Diazgranados y Barber
+(2017). Estas secuencias se concatenaron y se utilizó el software
+IQ-TREE para construir la filogenia basada en el modelo GTR+I+G. La
+calibración del árbol se realizó considerando eventos históricos clave,
+como la divergencia entre clados de Espeletiinae en Venezuela y
+Colombia, situando la corona del árbol en aproximadamente 2.3 millones
+de años, siguiendo la metodología de Pouchon et al. (2021).</p>
+<hr />
+</div>
+<div id="empleo-del-algoritmo-de-conectividad-histórica"
+class="section level3">
+<h3><strong>2.3 Empleo del Algoritmo de Conectividad
+Histórica</strong></h3>
+<p>Se utilizó un algoritmo desarrollado en R para integrar la
+información de los modelos de conectividad y la filogenia. Este
+algoritmo pondera las métricas de conectividad en función de la duración
+de cada configuración de páramo durante el intervalo de tiempo entre los
+nodos padre e hijo en la filogenia. Este intervalo se selecciona para
+representar el período en el que, hipotéticamente, las fluctuaciones
+climáticas del Pleistoceno habrían influido en la conectividad,
+aumentando o disminuyendo el aislamiento entre especies. Una vez
+establecidos estos tiempos clave, el algoritmo consulta la base de datos
+del modelo paleoclimático de Flantua et al. (2019) para obtener las
+configuraciones de páramo y su duración durante esos intervalos. Con
+esta información, calcula una media ponderada que refleja la
+conectividad histórica para cada par de combinaciones filogenéticas,
+asegurando que los períodos críticos de divergencia entre especies se
+consideren adecuadamente en el análisis, siempre que estos tiempos no
+superen los 2.2 millones de años, que es el intervalo cubierto por el
+modelo paleoclimático. Visita el siguiente <a
+href="https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene">enlace</a>
+para mas detalles.</p>
+<hr />
+</div>
+<div id="modelo-de-disimilitud-generalizada-gdm" class="section level3">
+<h3><strong>2.4 Modelo de Disimilitud Generalizada (GDM)</strong></h3>
+<p>Después de generar los datos de conectividad histórica a partir del
+algoritmo diseñado, se empleó un Modelo de Disimilitud Generalizada
+(GDM) para evaluar la relación entre la conectividad histórica y la
+divergencia evolutiva en Espeletiinae. El GDM permitió analizar cómo las
+métricas de conectividad histórica, calculadas en función de las
+configuraciones de páramo durante el Pleistoceno, se correlacionan con
+las distancias evolutivas entre los linajes. Visita el siguiente <a
+href="https://github.com/innerhaze/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis">enlace</a>
+para mas detalles.</p>
+<hr />
+</div>
+</div>
+<div id="resultados-principales" class="section level1">
+<h1><strong>3. Resultados Principales</strong></h1>
+<p>Los resultados indican que la conectividad geográfica durante el
+Pleistoceno tuvo un impacto significativo en la divergencia evolutiva de
+Espeletiinae. En particular, la conectividad histórica emergió como una
+variable explicativa clave de las distancias evolutivas cuando los
+parches (sitios de ocurrencia) estaban más alejados entre sí. En
+contraste, cuando los parches se encontraban más cercanos, la distancia
+euclidiana resultó ser un factor más determinante.</p>
+<hr />
+</div>
+<div id="problemas-y-retos-metodológicos" class="section level1">
+<h1><strong>4. Problemas y Retos Metodológicos</strong></h1>
+<p>A continuación, se presentan algunos problemas y retos a abordar
+dentro de los aspectos metodológicos:</p>
+<ol style="list-style-type: decimal">
+<li><div>
+<blockquote>
+<p><strong>Temporalidad de los datos de ocurrencia:</strong> La
+ocurrencia de cada linaje en el paisaje se basa en datos actuales. Por
+lo tanto, los cálculos de conectividad se realizan sobre la base de la
+distribución presente, ya que no se dispone de información precisa sobre
+la ubicación histórica de estos organismos. Esto se ilustra claramente
+en la figura 2 de este <a
+href="https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/">enlace</a></p>
+</blockquote>
+</div></li>
+<li><div>
+<blockquote>
+<p><strong>Complejidad en la medición de conectividad:</strong> Cuando
+las especies ocurren dentro del mismo parche, se complica la medición de
+la conectividad en Graphab. Esto se debe a que dos o más especies,
+cuando se encuentran en puntos adyacentes de ocurrencia, son tratadas
+como una única unidad de parche, lo que dificulta las mediciones que
+estan pensadas para realizarse entre pares de especies.</p>
+</blockquote>
+</div></li>
+<li><div>
+<blockquote>
+<p><strong>Limitaciones temporales en estudios filogenéticos:</strong>
+Las filogenias estudiadas con este método no pueden exceder los 2.2
+millones de años en sus tiempos de estudio, ya que este es el rango
+máximo de datos disponibles en la columna de polen utilizada.</p>
+</blockquote>
+</div></li>
+</ol>
+<hr />
+</div>
+<div id="referencias" class="section level1">
+<h1><strong>5. Referencias</strong></h1>
+<ol style="list-style-type: decimal">
+<li>Diazgranados, M., &amp; Barber, J. C. (2017). The endemic Espeletia
+complex: Phylogenetics, morphological evolution, and biogeography of the
+most diverse plant clade in the high Andes. Frontiers in Plant Science,
+8, 2058.</li>
+<li>Pouchon, C., et al. (2021). Phylogenetic signatures of ecological
+divergence and leapfrog adaptive radiation in Espeletia. American
+Journal of Botany, 108(1), 113-128.</li>
+<li>Flantua, S. G. A., O’Dea, A., Onstein, R. E., Hooghiemstra, H.,
+&amp; Hoorn, C. (2019). The flickering connectivity system of the north
+Andean páramos. Journal of Biogeography, 46(8), 1808-1825.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
