@@ -1,3 +1,3 @@
-# Resumen - Relación entre divergencia evolutiva y conectividad histórica en los páramos andinos del norte durante el Pleistoceno: El caso de Espeletiinae"
+# Resumen - Relationship between Evolutionary Divergence and Historical Connectivity in the Northern Andean Páramos During the Pleistocene: The Case of Espeletiinae
 
-[Click para ver el contenido](https://innerhaze.github.io/Summary/)
+[Link](https://innerhaze.github.io/Summary/)
