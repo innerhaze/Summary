@@ -12,9 +12,9 @@
 <meta name="author" content="" />
 
 
-<title>Relación entre divergencia evolutiva y conectividad histórica en los páramos andinos del norte durante el Pleistoceno: El caso de Espeletiinae</title>
+<title>Relationship between Evolutionary Divergence and Historical Connectivity in the Northern Andean Páramos During the Pleistocene: The Case of Espeletiinae</title>
 
-<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -30,7 +30,7 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
@@ -133,15 +133,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -170,8 +166,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -179,9 +175,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -326,9 +329,9 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Relación entre divergencia evolutiva y
-conectividad histórica en los páramos andinos del norte durante el
-Pleistoceno: El caso de Espeletiinae</h1>
+<h1 class="title toc-ignore">Relationship between Evolutionary
+Divergence and Historical Connectivity in the Northern Andean Páramos
+During the Pleistocene: The Case of Espeletiinae</h1>
 <h4 class="author"></h4>
 
 </div>
@@ -350,178 +353,208 @@ blockquote {
 }
 </style>
 <hr />
-<div id="introducción" class="section level1">
-<h1><strong>1. Introducción</strong></h1>
-<p>Este estudio explora la diversificación de los organismos en los
-páramos de los Andes del norte, un ecosistema de alta montaña que ha
-sido significativamente influenciado por eventos geológicos y climáticos
-durante el Pleistoceno. Durante esta época, las fluctuaciones climáticas
-generaron dinámicas complejas de conectividad entre los fragmentos de
-páramo, lo que se hipotetiza que afectó la distribución y divergencia de
-las especies que habitan estos ecosistemas. El objetivo de este estudio
-es evaluar la relación entre la divergencia evolutiva y la conectividad
-histórica durante el Pleistoceno, integrando la modelación
-paleoclimática con el complejo de frailejones (subtribu Espeletiinae)
-como modelo biológico.</p>
-<div id="section" class="section level5">
-<h5></h5>
-<p><strong>Nota</strong>: <em>Los títulos de las secciones metodológicas
-clave incluyen enlaces que dirigen a repositorios de GitHub con los
-códigos utilizados y explicaciones más detalladas de cada sección. Para
-revisar el proceso completo de este estudio, excluyendo la
-reconstrucción filogenética, consulta el siguiente <a
-href="https://innerhaze.github.io/Evolutionary-Divergence-Historical-Connectivity-in-Northern-Andean-Paramos-Pleistocene-/">enlace.</a></em></p>
+<div id="introduction" class="section level1">
+<h1><strong>1. Introduction</strong></h1>
+<p>This study provides a recent historical perspective aimed at better
+understanding the diversification processes of organisms in the northern
+Andean páramos, a high-mountain ecosystem that has been significantly
+influenced by geological and climatic events during the Pleistocene.
+During this time, climatic fluctuations generated complex dynamics of
+connectivity among the páramo fragments, which are hypothesized to have
+affected the distribution and divergence of species inhabiting these
+ecosystems. The objective of this study is to evaluate whether there is
+a relationship between evolutionary divergence and historical
+connectivity during the Pleistocene, aiming to identify which aspects of
+this connectivity are important in the speciation process. To achieve
+this, we integrate paleoclimatic modeling of the páramo boundaries over
+the last 2 million years with the evolutionary history of a complex of
+frailejones (subtribe Espeletiinae) as a biological model.</p>
+<hr />
+<p><strong>Note</strong>: <em>The titles of key methodological sections
+include links that direct to GitHub repositories with the codes used and
+more detailed explanations for each section. To review the complete
+process of this study, excluding the phylogenetic reconstruction, visit
+the following <a
+href="https://innerhaze.github.io/Evolutionary-Divergence-Historical-Connectivity-in-Northern-Andean-Paramos-Pleistocene-/">link.</a></em></p>
+<hr />
+<div id="context" class="section level3">
+<h3><strong>1.2 Context</strong></h3>
+<p>Three key processes shape divergence during speciation: gene flow,
+selection, and genetic drift. Gene flow and drift are profoundly
+influenced by the spatial configuration of the habitat, while selection
+depends on the local biotic and abiotic environment. These processes are
+believed to have a more pronounced impact in the early stages of
+speciation, before prezygotic barriers are established, which interrupt
+gene flow between lineages. Having a habitat distribution model spanning
+a considerable time interval where speciation events can occur provides
+an ideal opportunity to test this theoretical framework.</p>
+<p>Frailejones are plants closely tied to the climate, occurring
+exclusively at high elevations where arboreal plants are absent. Their
+evolution has been shaped by the spatial dynamics of the páramo during
+the Pleistocene, a period during which many of their current species
+originated.</p>
+<p>This study represents a first attempt to quantify the effect of
+habitat spatial configuration over time, evaluating how historical
+connectivity and area size have influenced gene flow and genetic drift
+during the speciation process.</p>
+<p>What time intervals and conditions are crucial for speciation? This
+is a fascinating question that has captured the interest of many
+researchers. However, the resources needed to address this question are
+limited. Therefore, this scenario provides an excellent opportunity to
+examine how spatial configuration over time can shed light on
+diversification processes.</p>
 <hr />
 </div>
 </div>
-<div id="metodología" class="section level1">
-<h1><strong>2. Metodología</strong></h1>
+<div id="methodology" class="section level1">
+<h1><strong>2. Methodology</strong></h1>
 <hr />
-<div id="modelos-de-conectividad-geográfica" class="section level3">
-<h3><strong>2.1 Modelos de Conectividad Geográfica</strong></h3>
-<p>El estudio comenzó con el desarrollo de modelos de conectividad
-geográfica, basados en el modelo paleoclimático propuesto por Flantua et
-al. (2019). Este modelo describe las fluctuaciones del Límite Superior
-del Bosque (LSB) a lo largo de ≈2 millones de años, lo que permite
-evaluar cómo estos cambios afectaron la conectividad entre los
-fragmentos de páramo en los Andes.</p>
+<div id="geographic-connectivity-models" class="section level3">
+<h3><strong>2.1 Geographic Connectivity Models</strong></h3>
+<p>The study began with the development of geographic connectivity
+models, based on the paleoclimatic model proposed by Flantua et
+al. (2019). This model describes the fluctuations of the Upper Forest
+Line (UFL) over ≈2 million years, allowing us to assess how these
+changes affected connectivity between the páramo fragments in the
+Andes.</p>
 <ol style="list-style-type: decimal">
 <li><div>
+
 <blockquote>
 <p><a
-href="https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling"><strong>Desarrollo
-de la Matriz de Costos de Movimiento:</strong></a> Se construyó un
-raster de costos utilizando un Modelo Digital de Elevación (DEM) que
-abarca todas las áreas de páramo en los Andes del norte. Se asignaron
-costos específicos de movimiento a diferentes franjas altitudinales,
-reflejando la limitada capacidad de dispersión de los organismos de
-páramo. El costo de movimiento aumenta gradualmente a medida que se
-aleja del núcleo del páramo, reflejando las dificultades que enfrentan
-las especies para dispersarse entre fragmentos aislados.</p>
+href="https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling"><strong>Development
+of the Movement Cost Matrix:</strong></a> A cost raster was constructed
+using a Digital Elevation Model (DEM) encompassing all páramo areas in
+the northern Andes. Specific movement costs were assigned to different
+altitudinal zones, reflecting the limited dispersal capacity of páramo
+organisms. The movement cost gradually increases as one moves away from
+the páramo core, reflecting the difficulties faced by species when
+dispersing between isolated fragments.</p>
 </blockquote>
-</div></li>
+<div>
+</li>
 <li><div>
+
 <blockquote>
 <p><a
-href="https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management"><strong>Cálculo
-de Métricas de Conectividad:</strong></a> Utilizando el software
-Graphab, se calcularon diversas métricas de conectividad, incluidas la
-Distancia de Menor Costo (RMC) y el índice de Flujo de Corriente (CF).
-Estas métricas se determinaron para 19 configuraciones distintas de
-páramo, derivadas de las fluctuaciones climáticas del Pleistoceno, según
-el modelo de Flantua et al. (2019). Estos cálculos son fundamentales
-para entender cómo las fluctuaciones climáticas influyeron en la
-conectividad entre los parches que representan la distribución de cada
-una de las especies incluidas en la filogenia de Espeletiinae
-desarrollada por Diazgranados y Barber (2017).</p>
+href="https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management"><strong>Calculation
+of Connectivity Metrics:</strong></a> Using the Graphab software,
+various connectivity metrics were calculated, including Least-Cost
+Distance (LCD) and the Current Flow (CF) index. These metrics were
+determined for 19 distinct páramo configurations, derived from the
+Pleistocene climatic fluctuations according to the Flantua et al. (2019)
+model. These calculations are crucial for understanding how climatic
+fluctuations influenced connectivity between the patches representing
+the distribution of each species included in the Espeletiinae phylogeny
+developed by Diazgranados and Barber (2017).</p>
 </blockquote>
-</div></li>
+<div>
+</li>
 </ol>
 <hr />
 </div>
-<div id="métodos-filogenéticos" class="section level3">
-<h3><strong>2.2 Métodos Filogenéticos</strong></h3>
-<p>Con los modelos de conectividad ya establecidos, se procedió a la
-construcción de una filogenia ultramétrica de Espeletiinae. Se
-utilizaron datos de secuencias de ADN de los genes ETS, ITS, y rpl16,
-obtenidos de estudios previos realizados por Diazgranados y Barber
-(2017). Estas secuencias se concatenaron y se utilizó el software
-IQ-TREE para construir la filogenia basada en el modelo GTR+I+G. La
-calibración del árbol se realizó considerando eventos históricos clave,
-como la divergencia entre clados de Espeletiinae en Venezuela y
-Colombia, situando la corona del árbol en aproximadamente 2.3 millones
-de años, siguiendo la metodología de Pouchon et al. (2021).</p>
+<div id="phylogenetic-methods" class="section level3">
+<h3><strong>2.2 Phylogenetic Methods</strong></h3>
+<p>With the connectivity models established, we proceeded to construct
+an ultrametric phylogeny of Espeletiinae. DNA sequence data from the
+ETS, ITS, and rpl16 genes, obtained from previous studies by
+Diazgranados and Barber (2017), were used. These sequences were
+concatenated, and the IQ-TREE software was used to build the phylogeny
+based on the GTR+I+G model. The tree was calibrated considering key
+historical events, such as the divergence between Espeletiinae clades in
+Venezuela and Colombia, placing the crown of the tree at approximately
+2.3 million years, following the methodology of Pouchon et
+al. (2021).</p>
 <hr />
 </div>
-<div id="empleo-del-algoritmo-de-conectividad-histórica"
-class="section level3">
-<h3><strong>2.3 Empleo del Algoritmo de Conectividad
-Histórica</strong></h3>
-<p>Se utilizó un algoritmo desarrollado en R para integrar la
-información de los modelos de conectividad y la filogenia. Este
-algoritmo pondera las métricas de conectividad en función de la duración
-de cada configuración de páramo durante el intervalo de tiempo entre los
-nodos padre e hijo en la filogenia. Este intervalo se selecciona para
-representar el período en el que, hipotéticamente, las fluctuaciones
-climáticas del Pleistoceno habrían influido en la conectividad,
-aumentando o disminuyendo el aislamiento entre especies. Una vez
-establecidos estos tiempos clave, el algoritmo consulta la base de datos
-del modelo paleoclimático de Flantua et al. (2019) para obtener las
-configuraciones de páramo y su duración durante esos intervalos. Con
-esta información, calcula una media ponderada que refleja la
-conectividad histórica para cada par de combinaciones filogenéticas,
-asegurando que los períodos críticos de divergencia entre especies se
-consideren adecuadamente en el análisis, siempre que estos tiempos no
-superen los 2.2 millones de años, que es el intervalo cubierto por el
-modelo paleoclimático. Visita el siguiente <a
-href="https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene">enlace</a>
-para mas detalles.</p>
+<div id="historical-connectivity-algorithm" class="section level3">
+<h3><strong>2.3 Historical Connectivity Algorithm</strong></h3>
+<p>An algorithm developed in R was used to integrate the information
+from the connectivity models and the phylogeny. This algorithm weights
+connectivity metrics based on the duration of each páramo configuration
+during the time interval between parent and child nodes in the
+phylogeny. This interval is selected to represent the period during
+which, hypothetically, the Pleistocene climatic fluctuations would have
+influenced connectivity, increasing or decreasing isolation between
+species. Once these key times were established, the algorithm queries
+the Flantua et al. (2019) paleoclimatic model database to obtain the
+páramo configurations and their duration during these intervals. With
+this information, a weighted average is calculated that reflects
+historical connectivity for each pair of phylogenetic combinations,
+ensuring that the critical divergence periods between species are
+appropriately considered in the analysis, provided these times do not
+exceed 2.2 million years, the time range covered by the paleoclimatic
+model. Visit the following <a
+href="https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene">link</a>
+for more details.</p>
 <hr />
 </div>
-<div id="modelo-de-disimilitud-generalizada-gdm" class="section level3">
-<h3><strong>2.4 Modelo de Disimilitud Generalizada (GDM)</strong></h3>
-<p>Después de generar los datos de conectividad histórica a partir del
-algoritmo diseñado, se empleó un Modelo de Disimilitud Generalizada
-(GDM) para evaluar la relación entre la conectividad histórica y la
-divergencia evolutiva en Espeletiinae. El GDM permitió analizar cómo las
-métricas de conectividad histórica, calculadas en función de las
-configuraciones de páramo durante el Pleistoceno, se correlacionan con
-las distancias evolutivas entre los linajes. Visita el siguiente <a
-href="https://github.com/innerhaze/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis">enlace</a>
-para mas detalles.</p>
+<div id="generalized-dissimilarity-model-gdm" class="section level3">
+<h3><strong>2.4 Generalized Dissimilarity Model (GDM)</strong></h3>
+<p>After generating the historical connectivity data from the designed
+algorithm, a Generalized Dissimilarity Model (GDM) was used to assess
+the relationship between historical connectivity and evolutionary
+divergence in Espeletiinae. The GDM allowed us to analyze how the
+historical connectivity metrics, calculated based on páramo
+configurations during the Pleistocene, correlate with the evolutionary
+distances between lineages. Visit the following <a
+href="https://github.com/innerhaze/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis">link</a>
+for more details.</p>
 <hr />
 </div>
 </div>
-<div id="resultados-principales" class="section level1">
-<h1><strong>3. Resultados Principales</strong></h1>
-<p>Los resultados indican que la conectividad geográfica durante el
-Pleistoceno tuvo un impacto significativo en la divergencia evolutiva de
-Espeletiinae. En particular, la conectividad histórica emergió como una
-variable explicativa clave de las distancias evolutivas cuando los
-parches (sitios de ocurrencia) estaban más alejados entre sí. En
-contraste, cuando los parches se encontraban más cercanos, la distancia
-euclidiana resultó ser un factor más determinante.</p>
+<div id="main-results" class="section level1">
+<h1><strong>3. Main Results</strong></h1>
+<p>The results indicate that geographic connectivity during the
+Pleistocene had a significant impact on the evolutionary divergence of
+Espeletiinae. In particular, historical connectivity emerged as a key
+explanatory variable for evolutionary distances when the patches
+(occurrence sites) were farther apart. In contrast, when the patches
+were closer together, Euclidean distance proved to be a more determining
+factor.</p>
 <hr />
 </div>
-<div id="problemas-y-retos-metodológicos" class="section level1">
-<h1><strong>4. Problemas y Retos Metodológicos</strong></h1>
-<p>A continuación, se presentan algunos problemas y retos a abordar
-dentro de los aspectos metodológicos:</p>
+<div id="methodological-issues-and-challenges" class="section level1">
+<h1><strong>4. Methodological Issues and Challenges</strong></h1>
+<p>Below are some issues and challenges to address within the
+methodological aspects:</p>
 <ol style="list-style-type: decimal">
 <li><div>
+
 <blockquote>
-<p><strong>Temporalidad de los datos de ocurrencia:</strong> La
-ocurrencia de cada linaje en el paisaje se basa en datos actuales. Por
-lo tanto, los cálculos de conectividad se realizan sobre la base de la
-distribución presente, ya que no se dispone de información precisa sobre
-la ubicación histórica de estos organismos. Esto se ilustra claramente
-en la figura 2 de este <a
-href="https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/">enlace</a></p>
+<p><strong>Temporal occurrence data:</strong> The occurrence of each
+lineage in the landscape is based on current data. Therefore,
+connectivity calculations are made based on the present distribution, as
+no precise information is available on the historical location of these
+organisms. This is clearly illustrated in figure 2 of this <a
+href="https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/">link</a></p>
+</blockquote>
+<div>
+</li>
+<li><div>
+<blockquote>
+<p><strong>Complexity in measuring connectivity:</strong> When species
+occur within the same patch, measuring connectivity in Graphab becomes
+complicated. This is because two or more species, when located in
+adjacent occurrence points, are treated as a single patch unit,
+complicating measurements intended to be made between species pairs.</p>
 </blockquote>
 </div></li>
 <li><div>
+
 <blockquote>
-<p><strong>Complejidad en la medición de conectividad:</strong> Cuando
-las especies ocurren dentro del mismo parche, se complica la medición de
-la conectividad en Graphab. Esto se debe a que dos o más especies,
-cuando se encuentran en puntos adyacentes de ocurrencia, son tratadas
-como una única unidad de parche, lo que dificulta las mediciones que
-estan pensadas para realizarse entre pares de especies.</p>
+<p><strong>Temporal limitations in phylogenetic studies:</strong>
+Phylogenies studied using this method cannot exceed 2.2 million years in
+their study times, as this is the maximum data range available in the
+pollen column used.</p>
 </blockquote>
-</div></li>
-<li><div>
-<blockquote>
-<p><strong>Limitaciones temporales en estudios filogenéticos:</strong>
-Las filogenias estudiadas con este método no pueden exceder los 2.2
-millones de años en sus tiempos de estudio, ya que este es el rango
-máximo de datos disponibles en la columna de polen utilizada.</p>
-</blockquote>
-</div></li>
+<div>
+</li>
 </ol>
 <hr />
 </div>
-<div id="referencias" class="section level1">
-<h1><strong>5. Referencias</strong></h1>
+<div id="references" class="section level1">
+<h1><strong>5. References</strong></h1>
 <ol style="list-style-type: decimal">
 <li>Diazgranados, M., &amp; Barber, J. C. (2017). The endemic Espeletia
 complex: Phylogenetics, morphological evolution, and biogeography of the
@@ -534,6 +567,7 @@ Journal of Botany, 108(1), 113-128.</li>
 &amp; Hoorn, C. (2019). The flickering connectivity system of the north
 Andean páramos. Journal of Biogeography, 46(8), 1808-1825.</li>
 </ol>
+<hr />
 </div>
 
 
