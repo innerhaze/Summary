@@ -1,12 +1,12 @@
 {
-    "id": "C3C5C9EC",
-    "path": "~/GitHub/Summary/index.Rmd",
-    "project_path": null,
+    "id": "B7C15736",
+    "path": "~/GitHub/Summary/about.Rmd",
+    "project_path": "about.Rmd",
     "type": "r_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1724746505035.0,
+    "created": 1726345233630.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
@@ -14,11 +14,11 @@
         "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1724746366,
+    "lastKnownWriteTime": 1724713215,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1724746366,
+    "last_content_update": 1724713215,
     "read_only": false,
     "read_only_alternatives": []
 }
